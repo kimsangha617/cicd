@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:727965539498:task-definition/develop-example-application-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:727965539498:task-definition/develop-sh-application-task:1",
     "containerDefinitions": [
         {
-            "name": "develop-example-application",
-            "image": "727965539498.dkr.ecr.ap-northeast-2.amazonaws.com/develop-example-application",
+            "name": "develop-sh-container",
+            "image": "727965539498.dkr.ecr.ap-northeast-2.amazonaws.com/develop-sh-application",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "develop-example-application-8080-tcp",
+                    "name": "develop-sh-container-8080-tcp",
                     "containerPort": 8080,
                     "hostPort": 8080,
                     "protocol": "tcp",
@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/develop-example-application-task",
+                    "awslogs-group": "/ecs/develop-sh-application-task",
                     "awslogs-region": "ap-northeast-2",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -32,7 +32,7 @@
             }
         }
     ],
-    "family": "develop-example-application-task",
+    "family": "develop-sh-application-task",
     "executionRoleArn": "arn:aws:iam::727965539498:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -78,7 +78,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-09-14T01:25:25.084Z",
+    "registeredAt": "2023-09-14T05:24:43.188Z",
     "registeredBy": "arn:aws:iam::727965539498:root",
     "tags": []
 }
